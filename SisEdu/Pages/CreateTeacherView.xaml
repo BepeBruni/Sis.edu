@@ -15,7 +15,7 @@
         <Label FontSize="24"
                TextColor="DarkCyan"
                Text="SIS.edu Professor">
-            
+
         </Label>
 
 
@@ -45,8 +45,56 @@
             </Button>
 
         </HorizontalStackLayout>
-        
+
+        <Border Stroke="DarkCyan"
+                StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout Padding="5">
+
+                <Label Text="   Aluno"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="DarkCyan"/>
+
+                <Entry
+                       TextColor="Black"
+                       Placeholder="Nome do aluno"
+                       x:Name="Name"
+                       Text="{Binding Name}"
+                    Margin="15,10, 15,0"/>
+
+                <Entry 
+                       TextColor="Black"
+                       Placeholder="Codigo do aluno"
+                       x:Name="Id"
+                       Text="{Binding Id}"
+                    Margin="15,0, 15,0"/>
+
+                <Button Command="{Binding StudentCommand}" Text="Cadastrar"
+                    BackgroundColor="DarkCyan"
+                    FontSize="12"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="55,15,55,0"
+                    >
+                    
+                </Button>
+                <Label 
+                       Text="{Binding ConsoleStudent}"
+                       Margin="0,0,0,0"></Label>
+
+                
+
+            </VerticalStackLayout>
+
+        </Border>
+
+
+
     </VerticalStackLayout>
-    
-    
+
+
 </ContentPage>

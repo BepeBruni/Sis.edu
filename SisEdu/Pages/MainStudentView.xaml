@@ -9,7 +9,7 @@
              >
 
     <VerticalStackLayout  Padding="10" 
-                         Spacing="10"
+                         Spacing="1"
                          VerticalOptions="Fill">
 
         <Label FontSize="24"
@@ -30,7 +30,8 @@
             <Button Text="Cursos"
                 FontAttributes="Bold"
                 TextColor="DarkMagenta"
-                BackgroundColor="White">
+                BackgroundColor="White"
+                    Command="{Binding NavigateMainStudentCommand}">
             </Button>
 
             <Button Text="Chat"
@@ -48,31 +49,44 @@
         </HorizontalStackLayout>
 
         <VerticalStackLayout Padding="20" 
-                         Spacing="20"
+                         Spacing="10"
                          VerticalOptions="Fill"
                          >
 
-            <ScrollView Orientation="Vertical">
+            <CollectionView ItemsSource="{Binding CursosList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
 
+                        <Border Stroke="DarkMagenta"
+            StrokeThickness="2"
+            Background="White"
+            VerticalOptions="Center"
+            >
 
-                <VerticalStackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30, 0,30, 0"/>
+                            </Border.StrokeShape>
 
-                    <CollectionView ItemsSource="{Binding Sample}"
-                        ItemsLayout="VerticalList">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Image Source="{Binding Source_}"
-                           Margin="100"/>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                            <Grid ColumnSpacing="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2" Source="icon.png" HeightRequest="60" WidthRequest="60" Aspect="AspectFill" Margin="10,3,0,0"></Image>
+                                <Label Grid.Column="1" Grid.Row="0" FontAttributes="Bold" FontSize="25" Text="{Binding Tema}" TextColor="DarkMagenta" Margin="5,5,0,0"></Label>
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Prof}" TextColor="Black" Margin="5,0,0,0" ></Label>
+                                <Button Grid.Row="2" Grid.Column="2" Text=">" FontSize="40" FontAttributes="Bold" HeightRequest="70" WidthRequest="60" TextColor="White" BackgroundColor="DarkMagenta" Margin="135,-40,0,0" ></Button>
 
-                </VerticalStackLayout>
-
-
-
-            </ScrollView>
-
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
 
         </VerticalStackLayout>

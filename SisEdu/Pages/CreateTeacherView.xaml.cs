@@ -8,4 +8,5 @@ public partial class CreateTeacherView : ContentPage
 
 		BindingContext = viewModel;
 	}
+
 }
