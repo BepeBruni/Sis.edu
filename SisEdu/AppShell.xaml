@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SisEdu.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:SisEdu.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="SisEdu">
+
+    <ShellContent
+    ContentTemplate="{DataTemplate pages:LoginStudentView}"
+    Route="LoginStudent"/>
+    <ShellContent
+    ContentTemplate="{DataTemplate pages:LoginTeacherView}"
+    Route="LoginTeacher"/>
+    <ShellContent
+    ContentTemplate="{DataTemplate pages:MainStudentView}"
+    Route="MainStudent"/>
+    <ShellContent
+    ContentTemplate="{DataTemplate pages:MainTeacherView}"
+    Route="MainTeacher"/>
+    <ShellContent
+    ContentTemplate="{DataTemplate pages:CreateTeacherView}"
+    Route="CreateTeacher"/>
+
+
+
+
+
+
+</Shell>

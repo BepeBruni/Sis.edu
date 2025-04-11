@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisEdu.Pages.CreateTeacherView"
+             BackgroundColor="White"
+             Padding="1"
+             
+             Shell.NavBarIsVisible="false"
+             >
+
+    <VerticalStackLayout Padding="20" 
+                         Spacing="10"
+                         >
+
+        <Label FontSize="24"
+               TextColor="DarkCyan"
+               Text="SIS.edu Professor">
+            
+        </Label>
+
+
+        <HorizontalStackLayout Padding="5"
+                               Spacing="50"
+                               HorizontalOptions="Center">
+
+            <Button Text="Cursos"
+                FontAttributes="Bold"
+                TextColor="Grey"
+                BackgroundColor="White"
+                Command="{Binding NavigateMainTeacherCommand}">
+            </Button>
+
+            <Button Text="Chat"
+                    FontAttributes="Bold"
+                    TextColor="Grey"
+                    BackgroundColor="White"
+                    Command="{Binding NavigateChatTeacherCommand}">
+            </Button>
+
+            <Button Text="Criar"
+                FontAttributes="Bold"
+                TextColor="DarkCyan"
+                BackgroundColor="White"
+                Command="{Binding NavigateCreateTeacherCommand}">
+            </Button>
+
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+    
+    
+</ContentPage>

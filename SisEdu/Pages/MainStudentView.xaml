@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SisEdu.Pages.MainStudentView"
+             BackgroundColor="White"
+             Padding="1"
+             
+             Shell.NavBarIsVisible="false"
+             >
+
+    <VerticalStackLayout  Padding="10" 
+                         Spacing="10"
+                         VerticalOptions="Fill">
+
+        <Label FontSize="24"
+        TextColor="DarkMagenta"
+        Text="SIS.edu Aluno"
+        TextDecorations="Underline"
+        FontAttributes="Bold"
+        >
+        
+
+        </Label>
+
+        <HorizontalStackLayout Padding="5"
+                               Spacing="50"
+                               HorizontalOptions="Center">
+
+
+            <Button Text="Cursos"
+                FontAttributes="Bold"
+                TextColor="DarkMagenta"
+                BackgroundColor="White">
+            </Button>
+
+            <Button Text="Chat"
+                    FontAttributes="Bold"
+                    TextColor="Grey"
+                    BackgroundColor="White">
+            </Button>
+
+            <Button Text="Experiencias"
+                FontAttributes="Bold"
+                TextColor="Grey"
+                BackgroundColor="White">
+            </Button>
+
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout Padding="20" 
+                         Spacing="20"
+                         VerticalOptions="Fill"
+                         >
+
+            <ScrollView Orientation="Vertical">
+
+
+                <VerticalStackLayout>
+
+                    <CollectionView ItemsSource="{Binding Sample}"
+                        ItemsLayout="VerticalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Source_}"
+                           Margin="100"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+
+
+
+            </ScrollView>
+
+
+
+        </VerticalStackLayout>
+
+        
+
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
